@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>W3.CSS & Bootstrap-style Cards</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- W3.CSS for layout styles -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+  <!-- Google Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+  <!-- Bootstrap CSS for cards -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body, h1, h2, h3, h4, h5, h6 { font-family: "Karma", sans-serif; }
+    .w3-bar-block .w3-bar-item { padding: 20px; }
+    .button {
+      background-color: #04AA6D; /* Green */
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+    .game-grid .card {
+      margin-bottom: 24px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar (hidden by default) -->
+  <nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left"
+       style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button">Home</a>
+    <a href="#recommendation" onclick="w3_close()" class="w3-bar-item w3-button">Community Recommendation</a>
+    <a href="#categories" onclick="w3_close()" class="w3-bar-item w3-button">Categories</a>
+  </nav>
+
+  <!-- Top menu -->
+  <div class="w3-top">
+    <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+      <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
+      <form action="/search" method="get" class="d-inline">
+        <input type="search" name="query" placeholder="Search...">
+        <button type="submit">Search</button>
+      </form>
+      <div class="w3-center w3-padding-16">Your Store</div>
+    </div>
+  </div>
+
+  <!-- PAGE CONTENT -->
+  <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+
+    <!-- First Game Card Row -->
+    <div class="w3-row-padding w3-padding-16 w3-center game-grid" id="food">
+      <!-- Clair Obscur card -->
+      <div class="w3-quarter">
+        <div class="card" style="width: 10rem; margin: auto;">
+          <img class="card-img-top" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQRmrETSJKewyNXWx5IvNNmOhvTOU8mR7CGRRZ6SFAjpyrxHetx" alt="Clair Obscur">
+          <div class="card-body">
+            <h5 class="card-title">Clair Obscur: Expedition 33</h5>
+            <p class="card-text">Turn‑based RPG with real‑time action, set in a Belle Époque France‑inspired fantasy world.</p>
+            <button class="btn button">A$ 27.99</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Is This Seat Taken? -->
+      <div class="w3-quarter">
+        <div class="card" style="width: 10rem; margin: auto;">
+          <img class="card-img-top" src="https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co9d7c.jpg" alt="Is This Seat Taken?">
+          <div class="card-body">
+            <h5 class="card-title">Is This Seat Taken?</h5>
+            <p class="card-text">A puzzle game where you arrange characters with seating preferences to optimize seating plans.</p>
+            <button class="btn button">A$ 57.50</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Split Fiction -->
+      <div class="w3-quarter">
+        <div class="card" style="width: 10rem; margin: auto;">
+          <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/en/thumb/4/40/Split_Fiction_cover_art.jpg/250px-Split_Fiction_cover_art.jpg" alt="Split Fiction">
+          <div class="card-body">
+            <h5 class="card-title">Split Fiction</h5>
+            <p class="card-text">Co‑op action-adventure where Mio and Zoe navigate simulations of their imaginative worlds after a creative heist.</p>
+            <button class="btn button">A$ 19.96</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Date Everything -->
+      <div class="w3-quarter">
+        <div class="card" style="width: 10rem; margin: auto;">
+          <img class="card-img-top" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQCE9hUt4euiS7xA7nqUF5dZv7x6LsggwsnSYLtIcu1UtuKOj7d" alt="Date Everything">
+          <div class="card-body">
+            <h5 class="card-title">Date Everything</h5>
+            <p class="card-text">Sandbox dating sim with magical glasses for dating anthropomorphic household objects.</p>
+            <button class="btn button">A$ 31.02</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second Game Card Row -->
+    <div class="w3-row-padding w3-padding-16 w3-center game-grid">
+      <!-- Pokemon Gold and Silver -->
+      <div class="w3-quarter">
+        <div class="card" style="width: 10rem; margin: auto;">
+          <img class="card-img-top" src="https://img.pokemondb.net/boxes/lg/silver-large.jpg" alt="Pokemon Gold And Silver">
+          <div class="card-body">
+            <h5 class="card-title">Pokemon Gold And Silver</h5>
+            <p class="card-text">Explore Johto and Kanto; challenge Gym Leaders and the Elite Four across two regions.</p>
+            <button class="btn button">A$ 7.03</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Terraria -->
+      <div class="w3-quarter">
+        <div class="card" style="width: 10rem; margin: auto;">
+          <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/en/1/1a/Terraria_Steam_artwork.jpg" alt="Terraria">
+          <div class="card-body">
+            <h5 class="card-title">Terraria</h5>
+            <p class="card-text">2D sandbox exploring, building, crafting and surviving in a procedurally generated world.</p>
+            <button class="btn button">A$ 18.45</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Peak -->
+      <div class="w3-quarter">
+        <div class="card" style="width: 10rem; margin: auto;">
+          <img class="card-img-top" src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2025/06/peak-game-tag-page-cover-art-custom.jpg" alt="Peak">
+          <div class="card-body">
+            <h5 class="card-title">Peak</h5>
+            <p class="card-text">Cooperative climbing game by Aggro Crab & Landfall, released 16 June 2025.</p>
+            <button class="btn button">A$ 39.82</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Minecraft -->
+      <div class="w3-quarter">
+        <div class="card" style="width: 10rem; margin: auto;">
+          <img class="card-img-top" src="https://i.pinimg.com/474x/53/7f/ab/537fabdcb78dde3cb7f8d500b124df23.jpg" alt="Minecraft">
+          <div class="card-body">
+            <h5 class="card-title">Minecraft</h5>
+            <p class="card-text">Sandbox game with blocky 3D world where you can create virtually anything you imagine.</p>
+            <button class="btn button">A$ 26.55</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pagination -->
+    <div class="w3-center w3-padding-32">
+      <div class="w3-bar">
+        <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
+        <a href="#" class="w3-bar-item w3-black w3-button">1</a>
+        <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
+        <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
+        <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
+        <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
+      </div>
+    </div>
+
+    <hr id="about">
+
+    <!-- Recommendation -->
+    <div class="w3-container w3-padding-32 w3-left">
+      <h5>Looking for suggestions</h5><br>
+      <div class="w3-padding-32">
+        <h4>Sign in to view personalized recommendations</h4>
+        <button onclick="myFunction()">Sign In</button>
+        <p>Or <b>sign up</b> and join Bounty for free.</p>
+        <script>
+          function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+          }
+          function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+          }
+          function myFunction() {
+            // Placeholder for sign-in logic
+            alert('Sign-in clicked');
+          }
+        </script>
+      </div>
+    </div>
+
+
+  <!-- Optional JavaScript for Bootstrap (not required if just cards) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
